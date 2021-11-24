@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Onur Kanmaz">
+    <meta name="description" content="This is an HTML document I created in order to learn HTML while also using it
+    for reinforcement">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning HTML</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/LearningStyle.css">
+    <script src="scripts/javascript.js" defer></script>
+
+</head>
+<body  style="font-size: larger" >
+<h1>  <i>Welcome!</i> (main title) </h1>
+    <p class="introduction"> This is my notebook for <em>practicing</em> HTML while learning.</p>
+<p><u>Last edited:</u> <time datetime="2021-11-23 18:00"> November 23, 2021 6pm</time></p>
+<section>
+    <header> This is a smiley picture: </header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/220px-Smiley.svg.png" alt="Smiley image">
+</section>
+<section>
+    <header> Some HTML structures:  </header>
+    <ol>
+        <li> <strong> <u> Headers:</u> </strong> </li>
+        <p> Headers can are identified with &lt;h1&gt;, can go up to &lt;h6&gt; to change order and size</p>
+
+        <li> <strong> <u> Paragraphs: </u> </strong> </li>
+        <p> Can be used for paragraphs of texts, usually for marking up regular text content (&lt;p&gt;)</p>
+        <p> - &lt;dt&gt; (description title) &lt;dd&gt;(description itself)</p>
+
+        <li> <strong> <u> Lists: </u> </strong> </li>
+        <p> Can be unordered (&lt;ul&gt;), ordered (&lt;ol&gt;) or definition (&lt;dl&gt;) depending on the content, all are inside list items (&lt;li&gt;). </p>
+
+        <li> <strong> <u> Links: </u> </strong></li>
+        <p> Use "&lt;a&gt;" (anchor) and "href" (hypertext reference) to make text within paragraphs into a <a target="_blank" title="Link to API" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#links">link</a></p>
+    </ol>
+</section>
+<section>
+
+    <header> HTML literal character usage table: </header>
+    <img src="images/HTMLChars.PNG" alt="Table of HTML characters" width="912" height="327">
+
+    <p> Left off <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> here</a>  in the Mozilla guide. </p>
+    <blockquote>
+        <p> <q>Life is like riding a bicycle.<br>To keep your balance,<br>you must keep moving.</q> </p>
+    <cite> - Albert Einstein</cite>
+    </blockquote>
+
+</section>
+<section>
+    <header> Inline Elements </header>
+    <ul>
+        <li> &lt;q&gt; </li>
+        <li> &lt;strong&gt;</li>
+        <li> &lt;b&gt;</li>
+        <li> &lt;i&gt;</li>
+        <li> &lt;em&gt;</li>
+        <li> &lt;span&gt; </li>
+    </ul>
+
+    <header> Block-Level Elements </header>
+    <ul>
+        <li> &lt;blockquote&gt; </li>
+        <li> &lt;p&gt;</li>
+        <li> &lt;ul&gt;</li>
+        <li> &lt;div&gt;</li>
+    </ul>
+
+    <p> <pre>   In CSS, <code> {color:green}</code> can be used to apply
+    that color to any element used in our HTML. </pre> </p>
+
+    <p>Here's the formula for water H<sub>2</sub>O</p>
+    <p>5<sup>2</sup> = 25 , MathML is better for marking math.</p>
+</section>
+<section>
+    <header> Images </header>
+    <ol>
+        <li> Use GIF for large areas of single color, limited color space, can do transparency with jagged edges. </li>
+
+        <li> SVG (scalable vector graphic) is good for complex drawings, logos, icons, etc. as it can be scaled without losing quality. (small file size) </li>
+
+        <li> JPG is good, but it has to be resized and compressed. Manually or software. </li>
+
+        <li> PNG is good at compression and images that need transparency, depending on use. </li>
+        <p> Check image files to make sure they're downloaded fast on website</p>
+    </ol>
+     <u> Make copies of the image in different resolutions for different screen sizes, and use that as options in the HTML:</u> </p>
+    <ol>
+        <li> This is done by using srcset="" and listing the different resolution copies of the image followed by a space and then the resolution (1x, 2x or 480w, 1980w for width) </li>
+
+        <li> The "sizes" attribute can be used to list which size image to use at which media query.</li>
+
+        <li> If we want to use a different image for different screen sizes to avoid cropping, we wrap the img element inside a "picture" element.
+        Then we use the "source" element and "srcset" attribute inside it to list the alternatives. A "media" attribute can be used to define the min-width of a viewport in which the alternative image will be used</li>
+
+        <li> A "figcaption" element can be used to caption images, then both the img and figcaption elements can be wrapped inside a "figure" element
+        to give the browser and search engines info about the content. </li>
+    </ol>
+</section>
+<section>
+    <header> Audio </header>
+    <ol>
+        <li> The &lt;audio&gt; element can be used to place audio on a web page. </li>
+
+        <li> The "controls" attribute can be added to allow browser default media controls. </li>
+
+        <li> The "loop" attribute can be used to make the media loop after it's played. </li>
+
+        <li> The "autoplay" attribute can be used to make the media play when the page is opened. </li>
+    </ol>
+    <audio controls>
+        <source src="sample-sound.mp3" type="audio/mp3">
+        Browser couldn't load the audio.
+    </audio>
+    <header> Videos </header>
+    <ul>
+        <li> Make sure videos are compressed with the right codec. (H.264 is good but patented)</li>
+
+        <li> AV1 or WebM are good options. Adaptive bitrate streaming can be used to switch resolutions depending on internet speed and display.</li>
+
+        <li> Make sure to include captions and subtitles in the webvtt format using the &lt;track&gt; element. </li>
+
+        <li> Types of "kind" attributes for videos: Captions, subtitles, descriptions, chapters. </li>
+
+        <li> Embedding other media services can be better for adaptive bitrate streaming rather than using the video element.</li>
+
+    </ul>
+    <video controls>
+        <source src="videos/video_sample_640.mp4" type="video/mp4">
+        <source src="videos/video_sample_1280.mp4.mp4" type="video/mp4">
+        <track src="videos/sample_captionsEN.vtt" kind="captions" label="US-English" srclang="eng" default>
+        <track src="videos/sample_captionsES.vtt" kind="subtitles" label="Español" srclang="es" default>
+        <p> This would be a video of the Earth rotating, if your device supported playing this video.</p>
+    </video>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section>
+    <header> Identifying Content </header>
+    <ul>
+        <li> Lang, dir, and charset attributes are used to specify content language inside the html element or others.  </li>
+
+        <li> lang="en-US" inside the html or any other element, &lt;meta charset="UTF-8"&gt; inside the head element </li>
+
+        <li> &lt;div&gt; or &lt;span&gt; elements can be used to wrap a group of elements. It's not a good idea to use them for everything.</li>
+
+    </ul>
+</section>
+<section>
+    <header> HTML Structures </header>
+    <ul>
+        <li> main <br><br> - Wraps around the main content of the page. (used once)  </li>
+
+        <li> header/footer <br><br> - Used to wrap header or footer. </li>
+
+        <li> article <br><br> - Used to wrap articles, can also be used for teaser cards, or social media posts. </li>
+
+        <li> section <br><br> - Used to mark the sections of long content. (Essays with subheaders) </li>
+
+        <li> aside <br><br> - Marks content that is off to the side or not the main attraction. </li>
+
+    </ul>
+</section>
+<section>
+    <header> HTML Forms</header> <br>
+    <form action="UWClone.html" method="get">
+
+        <label for="name"> Name</label>
+        <input id="name" name="name" type="text" > <br><br>
+
+        <label for="email"> Email </label>
+        <input type="email" id="email" name="email" required placeholder="me@example.com"> <br><br>
+
+        <button type="submit"> Sign Up </button>
+    </form>
+    <header> Some Input Types: </header>
+    <ul>
+        <li> Search </li>
+        <li> Phone </li>
+        <li> Date </li>
+        <li> File </li>
+        <li> Password </li>
+        <li> Text Area </li>
+        <li> Checkbox </li>
+        <li> Color </li>
+        <li> Radio </li>
+    </ul>
+
+    <fieldset>
+        <legend> Checkboxes in a fieldset </legend>
+        <input id="checkbox1" name="checkbox1" type="checkbox" value="1" checked>
+        <label for="checkbox1"> 1 </label> <br>
+        <input id="checkbox2" name="checkbox2" type="checkbox" value="2">
+        <label for="checkbox2"> 2 </label> <br>
+        <input id="checkbox3" name="checkbox3" type="checkbox" value="3">
+        <label for="checkbox3"> 3 </label>
+    </fieldset>
+</section>
+<section>
+    <header> Structuring Tabular Data </header>
+    <ul>
+        <li> &lt;table&gt; - Table (Wraps the whole table)</li>
+        <li> &lt;tr&gt; - Table row (Wraps a set of elements in the same row) <br><br>
+        - Attributes: colspan, rowspan, headers </li>
+        <li> &lt;th&gt; - Table Header (Defines a header for the column) <br><br>
+            - Attributes: colspan, rowspan, scope </li>
+        <li> &lt;td&gt; - Table Data (Marks the actual bits of data) </li>
+    </ul>
+
+    <table>
+        <tr>
+            <th> Name </th>
+            <th> Breed </th>
+            <th> Age </th>
+            <th> Photo </th>
+        </tr>
+        <tr>
+            <td> Bob </td>
+            <td> Golden Retriever </td>
+            <td>  4 </td>
+            <td> <img src="images/golden.png" width="314" height="209"> </td>
+        </tr>
+        <tr>
+            <td> Jerry </td>
+            <td> Black Labrador </td>
+            <td> 12 </td>
+            <td> <img src="images/blacklab.png" width="325" height="216"> </td>
+        </tr>
+    </table>
+</section>
+
+<small> - created by Onur Kanmaz. </small>
+</body>
+</html>

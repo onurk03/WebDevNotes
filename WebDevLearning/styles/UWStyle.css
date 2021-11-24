@@ -1,0 +1,66 @@
+
+.login {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    background-color: #b70101;
+    border-color: #9c0101;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+.form {
+    position: relative;
+    width: 500px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: "Helvetice Neue", Helvetica, Arial, sans-serif;
+    padding: 19px;
+    border: 1px solid #e3e3e3;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.title {
+    position: relative;
+    color: #555;
+    font-size: 17px;
+    padding-left: 7px;
+}
+
+.recovery {
+    color: #b70101;
+}
+
+.input {
+    position: relative;
+    width: 200px;
+}
+
+.navbar {
+    min-height: 70px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    background-image: url("https://login.wisc.edu/static/img/uwcrest_web_sm.png");
+    background-position: -13px -13px;
+    background-repeat: no-repeat;
+    background-color: #900;
+    border-radius: 0px;
+}
+
+.university {
+    color: #fff;
+    font-size: 20px;
+    float: left;
+    padding: 30px 60px;
+    line-height: 20px;
+    height: 50px;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
