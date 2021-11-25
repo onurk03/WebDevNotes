@@ -14,12 +14,14 @@
 
 </head>
 <body  style="font-size: larger" >
+<main>
 <h1>  <i>Welcome!</i> (main title) </h1>
     <p class="introduction"> This is my notebook for <em>practicing</em> HTML while learning.</p>
 <p><u>Last edited:</u> <time datetime="2021-11-23 18:00"> November 23, 2021 6pm</time></p>
+</main>
 <section>
     <header> This is a smiley picture: </header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/220px-Smiley.svg.png" alt="Smiley image">
+    <img class="smiley" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/220px-Smiley.svg.png" alt="Smiley image">
 </section>
 <section>
     <header> Some HTML structures:  </header>
@@ -128,7 +130,7 @@
         <li> Embedding other media services can be better for adaptive bitrate streaming rather than using the video element.</li>
 
     </ul>
-    <video controls>
+    <video class="video" controls>
         <source src="videos/video_sample_640.mp4" type="video/mp4">
         <source src="videos/video_sample_1280.mp4.mp4" type="video/mp4">
         <track src="videos/sample_captionsEN.vtt" kind="captions" label="US-English" srclang="eng" default>
@@ -136,7 +138,7 @@
         <p> This would be a video of the Earth rotating, if your device supported playing this video.</p>
     </video>
     <br>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 <section>
     <header> Identifying Content </header>
@@ -188,7 +190,6 @@
         <li> Color </li>
         <li> Radio </li>
     </ul>
-
     <fieldset>
         <legend> Checkboxes in a fieldset </legend>
         <input id="checkbox1" name="checkbox1" type="checkbox" value="1" checked>
@@ -209,7 +210,7 @@
             - Attributes: colspan, rowspan, scope </li>
         <li> &lt;td&gt; - Table Data (Marks the actual bits of data) </li>
     </ul>
-
+<div style="overflow-x:auto;">
     <table>
         <tr>
             <th> Name </th>
@@ -221,15 +222,16 @@
             <td> Bob </td>
             <td> Golden Retriever </td>
             <td>  4 </td>
-            <td> <img src="images/golden.png" width="314" height="209"> </td>
+            <td> <img class="dog" src="images/golden.png" width="314" height="209"> </td>
         </tr>
         <tr>
             <td> Jerry </td>
             <td> Black Labrador </td>
             <td> 12 </td>
-            <td> <img src="images/blacklab.png" width="325" height="216"> </td>
+            <td> <img class="dog" src="images/blacklab.png" width="314" height="209"> </td>
         </tr>
     </table>
+</div>
 </section>
 
 <small> - created by Onur Kanmaz. </small>
