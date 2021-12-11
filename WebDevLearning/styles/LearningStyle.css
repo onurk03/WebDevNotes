@@ -38,3 +38,7 @@ section {
 button:active {
     color: red;
 }
+
+small {
+    padding-left: 30px;
+}
